@@ -314,6 +314,25 @@ QPushButton::hover{
         <string>+</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>107</y>
+         <width>315</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images.qrc">:/image/Graphic Balance.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QGroupBox" name="Expence_DynamicGB">
       <property name="geometry">
@@ -347,198 +366,6 @@ color: rgb(237, 255, 251);</string>
         <string>ДИНАМИКА РАСХОДОВ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="TypeExLbl1">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>60</y>
-         <width>90</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl2">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>90</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl3">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>60</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl4">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>90</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl5">
-       <property name="geometry">
-        <rect>
-         <x>290</x>
-         <y>60</y>
-         <width>90</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl6">
-       <property name="geometry">
-        <rect>
-         <x>290</x>
-         <y>90</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl7">
-       <property name="geometry">
-        <rect>
-         <x>410</x>
-         <y>60</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl8">
-       <property name="geometry">
-        <rect>
-         <x>410</x>
-         <y>90</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl9">
-       <property name="geometry">
-        <rect>
-         <x>530</x>
-         <y>60</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl10">
-       <property name="geometry">
-        <rect>
-         <x>530</x>
-         <y>90</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl11">
-       <property name="geometry">
-        <rect>
-         <x>650</x>
-         <y>60</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="TypeExLbl12">
-       <property name="geometry">
-        <rect>
-         <x>650</x>
-         <y>90</y>
-         <width>90</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Вид расходов</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="MonthLbl">
        <property name="geometry">
         <rect>
@@ -552,7 +379,227 @@ color: rgb(237, 255, 251);</string>
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Месяц</string>
+        <string>Июль</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Супермаркеты</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Blue Circle.png</normaloff>:/image/Blue Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Развлечения</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Red Circle.png</normaloff>:/image/Red Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Переводы людям</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Purple Circle.png</normaloff>:/image/Purple Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>379</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Цифровой контент</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Yellow Circle.png</normaloff>:/image/Yellow Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Онлайн покупки</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Brown Circle.png</normaloff>:/image/Brown Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>521</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Транспорт</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Pinc Circle.png</normaloff>:/image/Pinc Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Рестораны и кафе</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Orange Circle.png</normaloff>:/image/Orange Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="geometry">
+        <rect>
+         <x>26</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Фитнес</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Green Circle.png</normaloff>:/image/Green Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Налоги</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Sky Blue Circle.png</normaloff>:/image/Sky Blue Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Остальное</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Grey Circle.png</normaloff>:/image/Grey Circle.png</iconset>
        </property>
       </widget>
      </widget>
@@ -679,6 +726,22 @@ QPushButton::hover{
        </property>
        <property name="text">
         <string>0 ₽</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>50</y>
+         <width>1</width>
+         <height>120</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="title">
+        <string>GroupBox</string>
        </property>
       </widget>
      </widget>
