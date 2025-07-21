@@ -47,3 +47,58 @@ void MainWindow::on_IncomeAddBtn_clicked()
                        });
 }
 
+//Кнопка "отмены" в окне прибыли
+void MainWindow::on_CancelIncomeBtn_clicked()
+{
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(0);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
+}
+
+// Кнопка "+" на расходах
+void MainWindow::on_ExpenceAddBtn_clicked()
+{
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(2);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
+}
+
+//Кнопка "отмены" в окне расходов
+void MainWindow::on_CancelExpenseBtn_clicked()
+{
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(0);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
+}
+
+// Кнопка "+" на балансе
+void MainWindow::on_BalanceAddBtn_clicked()
+{
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(3);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
+}
+
+//Кнопка "отмены" в окне балансе
+void MainWindow::on_CancelExpenseBtn_2_clicked()
+{
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(0);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
+}
+
