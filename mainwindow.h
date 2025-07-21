@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPropertyAnimation>
+#include <QGraphicsOpacityEffect>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +19,19 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_IncomeAddBtn_clicked();
+
+    void on_CancelIncomeBtn_clicked();
+
+    void on_ExpenceAddBtn_clicked();
+
+    void on_CancelExpenseBtn_clicked();
+
+    void on_BalanceAddBtn_clicked();
+
+    void on_CancelExpenseBtn_2_clicked();
 
 private:
     Ui::MainWindow *ui;
