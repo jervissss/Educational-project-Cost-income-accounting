@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
+#include <QDateTime>
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <QTimer>
@@ -36,4 +38,45 @@ private slots:
 private:
     Ui::MainWindow *ui;
 };
+
+class Transaction
+{
+public:
+
+void GetSum()
+    {
+
+    }
+
+void ChangeCategory(QString NewCategory)
+    {
+
+    }
+
+void SetSum()
+    {
+
+    }
+
+private:
+
+    QString Description;
+    int Sum;
+    QString Category;
+    QDateTime Date;
+
+};
+
+class Income : Transaction
+{
+private:
+    QString Source;
+};
+
+class Expense : Transaction
+{
+private:
+    QString PaymentMethod;
+};
+
 #endif // MAINWINDOW_H
