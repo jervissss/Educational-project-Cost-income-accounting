@@ -6,26 +6,1660 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1152</width>
+    <height>864</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>22</height>
-    </rect>
-   </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1152</width>
+      <height>864</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="MainPage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(1, 34, 27);</string>
+     </property>
+     <widget class="QGroupBox" name="IncomeGB">
+      <property name="geometry">
+       <rect>
+        <x>55</x>
+        <y>50</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="IncomeTitLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ПРИБЫЛЬ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="IncomeLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>61</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 500 25pt &quot;Calibri&quot;;
+color: rgb(0, 188, 0);</string>
+       </property>
+       <property name="text">
+        <string>0 ₽</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="IncomeAddBtn">
+       <property name="geometry">
+        <rect>
+         <x>287</x>
+         <y>3</y>
+         <width>30</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+font: 700 12pt &quot;Calibri&quot;;
+background-color: rgb(1, 34, 27);
+border: none;
+ }
+
+QPushButton::hover{
+	
+	
+	background-color: rgb(2, 70, 55);
+}</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>106</y>
+         <width>315</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images.qrc">:/image/Graphic Up.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>label</zorder>
+      <zorder>IncomeTitLbl</zorder>
+      <zorder>IncomeLbl</zorder>
+      <zorder>IncomeAddBtn</zorder>
+     </widget>
+     <widget class="QGroupBox" name="ExpenseGB">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>50</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="ExpanceTitLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>РАСХОДЫ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ExpenceLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 500 25pt &quot;Calibri&quot;;
+color: rgb(202, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>0 ₽</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ExpenceAddBtn">
+       <property name="geometry">
+        <rect>
+         <x>287</x>
+         <y>3</y>
+         <width>30</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+font: 700 12pt &quot;Calibri&quot;;
+background-color: rgb(1, 34, 27);
+border: none;
+ }
+
+QPushButton::hover{
+	
+	
+	background-color: rgb(2, 70, 55);
+}</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>107</y>
+         <width>315</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images.qrc">:/image/Graphic Down.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>label_2</zorder>
+      <zorder>ExpanceTitLbl</zorder>
+      <zorder>ExpenceLbl</zorder>
+      <zorder>ExpenceAddBtn</zorder>
+     </widget>
+     <widget class="QGroupBox" name="BalanceGB">
+      <property name="geometry">
+       <rect>
+        <x>775</x>
+        <y>50</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="BalanceTitLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>БАЛАНС</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BalanceLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 500 25pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0 ₽</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="BalanceAddBtn">
+       <property name="geometry">
+        <rect>
+         <x>287</x>
+         <y>3</y>
+         <width>30</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+font: 700 12pt &quot;Calibri&quot;;
+background-color: rgb(1, 34, 27);
+border: none;
+ }
+
+QPushButton::hover{
+	
+	
+	background-color: rgb(2, 70, 55);
+}</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>107</y>
+         <width>315</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images.qrc">:/image/Graphic Balance.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Expence_DynamicGB">
+      <property name="geometry">
+       <rect>
+        <x>55</x>
+        <y>325</y>
+        <width>1040</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="DynamicLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>171</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ДИНАМИКА РАСХОДОВ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>170</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Июль</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Супермаркеты</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Blue Circle.png</normaloff>:/image/Blue Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Развлечения</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Red Circle.png</normaloff>:/image/Red Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Переводы людям</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Purple Circle.png</normaloff>:/image/Purple Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>379</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Цифровой контент</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Yellow Circle.png</normaloff>:/image/Yellow Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Онлайн покупки</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Brown Circle.png</normaloff>:/image/Brown Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>521</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Транспорт</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Pinc Circle.png</normaloff>:/image/Pinc Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Рестораны и кафе</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Orange Circle.png</normaloff>:/image/Orange Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="geometry">
+        <rect>
+         <x>26</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Фитнес</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Green Circle.png</normaloff>:/image/Green Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>60</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Налоги</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Sky Blue Circle.png</normaloff>:/image/Sky Blue Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>90</y>
+         <width>140</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Остальное</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/Grey Circle.png</normaloff>:/image/Grey Circle.png</iconset>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="GoalGb">
+      <property name="geometry">
+       <rect>
+        <x>55</x>
+        <y>600</y>
+        <width>501</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="GoalLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ЦЕЛЬ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="GoalNowLBl">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>60</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>СЕЙЧАС</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="GoalNeedLbl">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>60</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ТРЕБУЕТСЯ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BalanceLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>117</x>
+         <y>130</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 500 25pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0 ₽</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BalanceLbl_3">
+       <property name="geometry">
+        <rect>
+         <x>327</x>
+         <y>130</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 500 25pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0 ₽</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>50</y>
+         <width>2</width>
+         <height>120</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="GoalAddBtn_2">
+       <property name="geometry">
+        <rect>
+         <x>467</x>
+         <y>3</y>
+         <width>31</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+font: 700 12pt &quot;Calibri&quot;;
+background-color: rgb(1, 34, 27);
+border: none;
+ }
+
+QPushButton::hover{
+	
+	
+	background-color: rgb(2, 70, 55);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/RedactIcon.png</normaloff>:/image/RedactIcon.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="InvestmentDB">
+      <property name="geometry">
+       <rect>
+        <x>575</x>
+        <y>600</y>
+        <width>521</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="InvestmentLbl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ИНВЕСТИЦИИ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="InvNALbl">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>105</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>НЕДОСТУПНО</string>
+       </property>
+      </widget>
+     </widget>
+     <zorder>IncomeGB</zorder>
+     <zorder>BalanceGB</zorder>
+     <zorder>Expence_DynamicGB</zorder>
+     <zorder>GoalGb</zorder>
+     <zorder>InvestmentDB</zorder>
+     <zorder>ExpenseGB</zorder>
+    </widget>
+    <widget class="QWidget" name="IncomePage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(1, 34, 27);</string>
+     </property>
+     <widget class="QGroupBox" name="IncomeAddGB">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>391</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLineEdit" name="NameIncomeLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>140</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: Зарплата</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="SumIncomeLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>240</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: 20000</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="CategoryIncomeLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>340</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Выберите категорию</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Зарплата</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Бизнес</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Переводы</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Подарок</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Остальное</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="DateIncomeLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>440</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: 12.07.2025</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="CancelIncomeBtn">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>660</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SaveIncomeBtn">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>660</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="IncomeTitLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ИЗМЕНЕНИЕ ПРИБЫЛИ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>117</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Описание</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_3">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>217</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Сумма</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_4">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>317</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Категория прибыли</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_5">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>417</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ExpensePage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(1, 34, 27);</string>
+     </property>
+     <widget class="QGroupBox" name="ExpenseAddGB">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>391</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLineEdit" name="NameExpenseLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>140</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: Аренда</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="SumExpenseLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>240</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: 20000</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="CategoryExpenseLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>340</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Выберите категорию</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Супермаркеты</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Фитнес</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Рестораны и кафе</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Переводы людям</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Цифровой контент</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Развлечения</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Онлайн покупки</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Транспорт</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Налоги</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Остальное</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="DateExpenseLbl">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>440</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: 12.07.2025</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="CancelExpenseBtn">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>660</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SaveExpenseBtn">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>660</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ExpenseTitLbl">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ИЗМЕНЕНИЕ РАСХОДОВ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_6">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>117</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Описание</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_7">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>217</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Сумма</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_8">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>317</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Категория расходов</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_9">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>417</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="BalancePage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(1, 34, 27);</string>
+     </property>
+     <widget class="QGroupBox" name="ExpenseAddGB_2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>391</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLineEdit" name="NameExpenseLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>140</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: Аренда</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="SumExpenseLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>240</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: 20000</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="CategoryExpenseLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>340</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Выберите категорию</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Добавить к балансу</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Вычесть из баланса</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="DateExpenseLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>440</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Например: 12.07.2025</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="CancelExpenseBtn_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>660</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SaveExpenseBtn_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>660</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ExpenseTitLbl_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ИЗМЕНЕНИЕ БАЛАНСА</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_10">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>117</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Описание</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_11">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>217</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Сумма</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_12">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>317</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Добавить/вычесть</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MonthLbl_13">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>417</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="BackgroundLbl_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1152</width>
+      <height>864</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(1, 34, 27);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>BackgroundLbl_3</zorder>
+   <zorder>stackedWidget</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

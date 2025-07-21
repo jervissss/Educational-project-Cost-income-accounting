@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/img"/>
+    <qresource prefix="/">
+        <file>image/Graphic Up.png</file>
+        <file>image/Graphic Down.png</file>
+        <file>image/Graphic Balance.png</file>
+        <file>image/Blue Circle.png</file>
+        <file>image/Green Circle.png</file>
+        <file>image/Grey Circle.png</file>
+        <file>image/Orange Circle.png</file>
+        <file>image/Purple Circle.png</file>
+        <file>image/Red Circle.png</file>
+        <file>image/Yellow Circle.png</file>
+        <file>image/Brown Circle.png</file>
+        <file>image/Pinc Circle.png</file>
+        <file>image/Sky Blue Circle.png</file>
+        <file>image/RedactIcon.png</file>
+    </qresource>
+</RCC>
