@@ -7,7 +7,6 @@
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <QTimer>
-#include "QtSql"
 #include "QSqlDatabase"
 #include "QSqlQuery"
 
@@ -15,34 +14,56 @@ class Transaction
 {
 public:
 
-    void SetData(int Num)
+    //Установка данных
+    void SetData(QString NewDesc, int NewSum, QString NewCategory, QDateTime NewDate)
     {
-        Sum = Sum + Num;
-    }
-
-    void SetData(QString NewCategory)
-    {
+        Sum = NewSum;
         Category = NewCategory;
-    }
-    void SetData(QDateTime NewDate)
-    {
         Date = NewDate;
+        Description= NewDesc;
     }
 
+    //Получение данных
     int GetSum()
     {
         return Sum;
     }
 
-    QString GetCategory()
+
+    //Перенос данных в БД
+    void Set2SQL(QSqlDatabase &db, int index)
     {
-        return Category;
+        QString TableName;
+        switch (index)
+        {
+            case(1):
+            TableName = "IncomeTable";
+            break;
+
+            case(2):
+            TableName = "ExpenseTable";
+            break;
+
+            case(3):
+            TableName = "BalanceTable";
+            break;
+
+            default:
+            break;
+        }
+
+        db.open();
+        QSqlQuery query;
+        query.prepare("INSERT INTO dbo."+TableName+" (Description, Sum, Category, Date) VALUES (:desc, :sum, :category, :date)");
+        query.bindValue(":desc", Description);
+        query.bindValue(":sum", Sum);
+        query.bindValue(":category", Category);
+        query.bindValue(":date", Date);
+
+        query.exec();
+        db.close();
     }
 
-    QDateTime GetDate()
-    {
-        return Date;
-    }
 private:
 
     QString Description;
@@ -51,16 +72,24 @@ private:
     QDateTime Date;
 };
 
+//Дочерний класс прибыли
 class Income : public Transaction
 {
 private:
     QString Source;
 };
 
+//Дочерний класс расходов
 class Expense : public Transaction
 {
 private:
     QString PaymentMethod;
+};
+
+//Дочерний класс баланса
+class Balance : public Transaction
+{
+
 };
 
 QT_BEGIN_NAMESPACE
@@ -94,11 +123,14 @@ private slots:
 
     void on_SaveExpenseBtn_clicked();
 
+    void on_SaveBalanceBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Transaction Tr;
     Income Inc;
     Expense Ex;
+    Balance Bal;
     QSqlDatabase db;
 };
 

@@ -27,7 +27,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="MainPage">
      <property name="styleSheet">
@@ -923,28 +923,6 @@ font: 11pt &quot;Calibri&quot;;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="DateIncomeLE">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>440</y>
-         <width>210</width>
-         <height>40</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(1, 40, 31);
-border-radius: 1 px;
-border: 2px solid#aaa;
-border-color: rgb(2, 70, 55);
-padding-left: 7px;
-font: 11pt &quot;Calibri&quot;;
-</string>
-       </property>
-       <property name="placeholderText">
-        <string>Например: 12.07.2025</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="CancelIncomeBtn">
        <property name="geometry">
         <rect>
@@ -1079,6 +1057,25 @@ QPushButton::hover
        </property>
        <property name="text">
         <string>Дата (необязательно)</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="DateIncomeDE">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>440</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
        </property>
       </widget>
      </widget>
@@ -1220,28 +1217,6 @@ font: 11pt &quot;Calibri&quot;;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="DateExpenseLE">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>440</y>
-         <width>210</width>
-         <height>40</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(1, 40, 31);
-border-radius: 1 px;
-border: 2px solid#aaa;
-border-color: rgb(2, 70, 55);
-padding-left: 7px;
-font: 11pt &quot;Calibri&quot;;
-</string>
-       </property>
-       <property name="placeholderText">
-        <string>Например: 12.07.2025</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="CancelExpenseBtn">
        <property name="geometry">
         <rect>
@@ -1378,6 +1353,25 @@ QPushButton::hover
         <string>Дата (необязательно)</string>
        </property>
       </widget>
+      <widget class="QDateEdit" name="DateExpenseDE">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>450</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="BalancePage">
@@ -1399,7 +1393,7 @@ QPushButton::hover
       <property name="title">
        <string/>
       </property>
-      <widget class="QLineEdit" name="NameBalanceLE">
+      <widget class="QLineEdit" name="DescBalanceLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1476,28 +1470,6 @@ font: 11pt &quot;Calibri&quot;;
          <string>Вычесть из баланса</string>
         </property>
        </item>
-      </widget>
-      <widget class="QLineEdit" name="DateBalanceLE">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>440</y>
-         <width>210</width>
-         <height>40</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(1, 40, 31);
-border-radius: 1 px;
-border: 2px solid#aaa;
-border-color: rgb(2, 70, 55);
-padding-left: 7px;
-font: 11pt &quot;Calibri&quot;;
-</string>
-       </property>
-       <property name="placeholderText">
-        <string>Например: 12.07.2025</string>
-       </property>
       </widget>
       <widget class="QPushButton" name="CancelBalanceBtn">
        <property name="geometry">
@@ -1633,6 +1605,25 @@ QPushButton::hover
        </property>
        <property name="text">
         <string>Дата (необязательно)</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="DateBalanceDE">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>440</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 40, 31);
+border-radius: 1 px;
+border: 2px solid#aaa;
+border-color: rgb(2, 70, 55);
+padding-left: 7px;
+font: 11pt &quot;Calibri&quot;;
+</string>
        </property>
       </widget>
      </widget>
