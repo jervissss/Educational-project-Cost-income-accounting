@@ -56,6 +56,7 @@ public:
         query.bindValue(":category", Category);
         query.bindValue(":date", Date);
 
+
         query.exec();
         db.close();
     }
@@ -70,6 +71,20 @@ private:
 //Дочерний класс прибыли
 class Income : public Transaction
 {
+public:
+
+    //Добавление в БД источника дохода
+    void SetSourse2SQL(QSqlDatabase &db, QString Source)
+    {
+        this->Source = Source;
+        db.open();
+        QSqlQuery query;
+        query.prepare("Update dbo.IncomeTable SET Source = :source WHERE id = (SELECT MAX(id) FROM dbo.IncomeTable)");
+        query.bindValue(":source", this->Source);
+        query.exec();
+        db.close();
+    }
+
 private:
     QString Source;
 };
@@ -77,6 +92,20 @@ private:
 //Дочерний класс расходов
 class Expense : public Transaction
 {
+public:
+
+    //Добавление в БД метода оплаты
+    void SetPaymentMethod2SQL(QSqlDatabase &db, QString PaymentMethod)
+    {
+        this->PaymentMethod = PaymentMethod;
+        db.open();
+        QSqlQuery query;
+        query.prepare("Update dbo.ExpenseTable SET PaymentMethod = :paymentmethod WHERE id = (SELECT MAX(id) FROM dbo.ExpenseTable)");
+        query.bindValue(":paymentmethod", this->PaymentMethod);
+        query.exec();
+        db.close();
+    }
+
 private:
     QString PaymentMethod;
 };

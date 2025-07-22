@@ -113,6 +113,9 @@ void MainWindow::on_SaveIncomeBtn_clicked()
     //Обновление информации в интерфейсе
     UpdateInfo();
 
+    //Сохранение источника дохода в БД и ООП
+    Inc.SetSourse2SQL(db, ui->IncomeSourceLE->text());
+
     //Очистка полей в окне прибыли
     ui->SumIncomeLE->clear();
     ui->DateIncomeDE->setDate(QDate::currentDate());
@@ -143,6 +146,9 @@ void MainWindow::on_SaveExpenseBtn_clicked()
     ui->DateExpenseDE->setDate(QDate::currentDate());
     ui->CategoryExpenseCB->setCurrentIndex(0);
     ui->DescExpenseLE->clear();
+
+    //Сохранение метода оплаты в БД и ООП
+    Ex.SetPaymentMethod2SQL(db, ui->ExpensePaymentLE->text());
 
     //Анимация проявления к главному окну
     OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
