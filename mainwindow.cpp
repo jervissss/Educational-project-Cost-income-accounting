@@ -6,12 +6,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //Подключение к БД
+    db = QSqlDatabase::addDatabase("QODBC");
+    db.setDatabaseName("DRIVER={SQL Server};SERVER=JERVISSSS\\LOCALSQL;DATABASE=Nurlan");
+    db.setUserName("Nurlan123");
+    db.setPassword("123");
+    db.open();
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    db.close();
 }
 
 // Анимация проявления

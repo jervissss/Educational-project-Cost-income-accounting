@@ -7,6 +7,9 @@
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <QTimer>
+#include "QtSql"
+#include "QSqlDatabase"
+#include "QSqlQuery"
 
 class Transaction
 {
@@ -96,6 +99,7 @@ private:
     Transaction Tr;
     Income Inc;
     Expense Ex;
+    QSqlDatabase db;
 };
 
 
