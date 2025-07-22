@@ -4,6 +4,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+
 {
     ui->setupUi(this);
 
@@ -14,9 +15,11 @@ MainWindow::MainWindow(QWidget *parent)
     db.setPassword("123");
 
     //Проставление сегодняшней даты в DateEdit
-    ui->DateBalanceDE->setDate(QDate::currentDate());
     ui->DateIncomeDE->setDate(QDate::currentDate());
     ui->DateExpenseDE->setDate(QDate::currentDate());
+
+    //Обновление информации из БД
+    UpdateInfo();
 }
 
 MainWindow::~MainWindow()
@@ -93,28 +96,6 @@ void MainWindow::on_CancelExpenseBtn_clicked()
                        });
 }
 
-// Кнопка "+" на балансе
-void MainWindow::on_BalanceAddBtn_clicked()
-{
-    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
-    QTimer::singleShot(450, [this]()
-                       {
-                           ui->stackedWidget->setCurrentIndex(3);
-                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
-                       });
-}
-
-//Кнопка "отмены" в окне балансе
-void MainWindow::on_CancelBalanceBtn_clicked()
-{
-    //Анимация проявления к главному окну
-    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
-    QTimer::singleShot(450, [this]()
-                       {
-                           ui->stackedWidget->setCurrentIndex(0);
-                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
-                       });
-}
 
 //Кнопка "сохранения" в окне прибыли
 void MainWindow::on_SaveIncomeBtn_clicked()
@@ -124,7 +105,7 @@ void MainWindow::on_SaveIncomeBtn_clicked()
     Inc.Set2SQL(db, ui->stackedWidget->currentIndex());
 
     //Обновление информации в интерфейсе
-
+    UpdateInfo();
 
     //Очистка полей в окне прибыли
     ui->SumIncomeLE->clear();
@@ -149,7 +130,7 @@ void MainWindow::on_SaveExpenseBtn_clicked()
     Ex.Set2SQL(db, ui->stackedWidget->currentIndex());
 
     //Обновление информации в интерфейсе
-
+    UpdateInfo();
 
     //Очистка полей в окне расходов
     ui->SumExpenseLE->clear();
@@ -166,28 +147,19 @@ void MainWindow::on_SaveExpenseBtn_clicked()
                        });
 }
 
-
-void MainWindow::on_SaveBalanceBtn_clicked()
+//Метод обновления информации из БД
+void MainWindow::UpdateInfo()
 {
-    //Сохранение данных в БД
-    Bal.SetData(ui->DescBalanceLE->text(), ui->SumBalanceLE->text().toInt(), ui->CategoryBalanceCB->currentText(), ui->DateBalanceDE->dateTime());
-    Bal.Set2SQL(db, ui->stackedWidget->currentIndex());
-
-    //Очистка полей в окне расходов
-    ui->SumBalanceLE->clear();
-    ui->DateBalanceDE->setDate(QDate::currentDate());
-    ui->CategoryBalanceCB->setCurrentIndex(0);
-    ui->DescBalanceLE->clear();
-
-    //Обновление информации в интерфейсе
-
-
-    //Анимация проявления к главному окну
-    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
-    QTimer::singleShot(450, [this]()
-                       {
-                           ui->stackedWidget->setCurrentIndex(0);
-                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
-                       });
+    db.open();
+    QSqlQuery query;
+    query.exec("SELECT Income FROM AccountingAllTable");
+    query.next();
+    int Income = query.value(0).toInt();
+    ui->IncomeLbl->setText(QString::number(Income) + " ₽");
+    query.exec("SELECT Expense FROM AccountingAllTable");
+    query.next();
+    int Expense = query.value(0).toInt();
+    ui->ExpenseLbl->setText(QString::number(Expense) + " ₽");
+    int balance = Income - Expense;
+    ui->BalanceLbl->setText(QString::number(balance) + " ₽");
 }
-

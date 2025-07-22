@@ -44,10 +44,6 @@ public:
             TableName = "ExpenseTable";
             break;
 
-            case(3):
-            TableName = "BalanceTable";
-            break;
-
             default:
             break;
         }
@@ -63,7 +59,6 @@ public:
         query.exec();
         db.close();
     }
-
 private:
 
     QString Description;
@@ -84,12 +79,6 @@ class Expense : public Transaction
 {
 private:
     QString PaymentMethod;
-};
-
-//Дочерний класс баланса
-class Balance : public Transaction
-{
-
 };
 
 QT_BEGIN_NAMESPACE
@@ -115,22 +104,17 @@ private slots:
 
     void on_CancelExpenseBtn_clicked();
 
-    void on_BalanceAddBtn_clicked();
-
-    void on_CancelBalanceBtn_clicked();
-
     void on_SaveIncomeBtn_clicked();
 
     void on_SaveExpenseBtn_clicked();
 
-    void on_SaveBalanceBtn_clicked();
+    void UpdateInfo();
 
 private:
     Ui::MainWindow *ui;
     Transaction Tr;
     Income Inc;
     Expense Ex;
-    Balance Bal;
     QSqlDatabase db;
 };
 
