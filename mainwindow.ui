@@ -49,7 +49,7 @@ color: rgb(237, 255, 251);</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="IncomeTitLbl">
+      <widget class="QLabel" name="IncomeTitLblM">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -70,7 +70,7 @@ color: rgb(237, 255, 251);</string>
         <rect>
          <x>20</x>
          <y>70</y>
-         <width>61</width>
+         <width>261</width>
          <height>31</height>
         </rect>
        </property>
@@ -111,7 +111,7 @@ QPushButton::hover{
         <string>+</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="IncomePixLbl">
        <property name="geometry">
         <rect>
          <x>3</x>
@@ -130,8 +130,8 @@ QPushButton::hover{
         <bool>true</bool>
        </property>
       </widget>
-      <zorder>label</zorder>
-      <zorder>IncomeTitLbl</zorder>
+      <zorder>IncomePixLbl</zorder>
+      <zorder>IncomeTitLblM</zorder>
       <zorder>IncomeLbl</zorder>
       <zorder>IncomeAddBtn</zorder>
      </widget>
@@ -151,7 +151,7 @@ color: rgb(237, 255, 251);</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="ExpanceTitLbl">
+      <widget class="QLabel" name="ExpenseTitLblM">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -167,12 +167,12 @@ color: rgb(237, 255, 251);</string>
         <string>РАСХОДЫ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="ExpenceLbl">
+      <widget class="QLabel" name="ExpenseLbl">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>70</y>
-         <width>51</width>
+         <width>271</width>
          <height>31</height>
         </rect>
        </property>
@@ -184,7 +184,7 @@ color: rgb(202, 0, 0);</string>
         <string>0 ₽</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="ExpenceAddBtn">
+      <widget class="QPushButton" name="ExpenseAddBtn">
        <property name="geometry">
         <rect>
          <x>287</x>
@@ -213,7 +213,7 @@ QPushButton::hover{
         <string>+</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="ExpensePixLbl">
        <property name="geometry">
         <rect>
          <x>3</x>
@@ -232,10 +232,10 @@ QPushButton::hover{
         <bool>true</bool>
        </property>
       </widget>
-      <zorder>label_2</zorder>
-      <zorder>ExpanceTitLbl</zorder>
-      <zorder>ExpenceLbl</zorder>
-      <zorder>ExpenceAddBtn</zorder>
+      <zorder>ExpensePixLbl</zorder>
+      <zorder>ExpenseTitLblM</zorder>
+      <zorder>ExpenseLbl</zorder>
+      <zorder>ExpenseAddBtn</zorder>
      </widget>
      <widget class="QGroupBox" name="BalanceGB">
       <property name="geometry">
@@ -253,7 +253,7 @@ color: rgb(237, 255, 251);</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="BalanceTitLbl">
+      <widget class="QLabel" name="BalanceTitLblM">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -274,7 +274,7 @@ color: rgb(237, 255, 251);</string>
         <rect>
          <x>20</x>
          <y>70</y>
-         <width>41</width>
+         <width>271</width>
          <height>31</height>
         </rect>
        </property>
@@ -314,7 +314,7 @@ QPushButton::hover{
         <string>+</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="BalancePixLbl">
        <property name="geometry">
         <rect>
          <x>3</x>
@@ -382,7 +382,7 @@ color: rgb(237, 255, 251);</string>
         <string>Июль</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="CategoryEx">
        <property name="geometry">
         <rect>
          <x>50</x>
@@ -404,7 +404,7 @@ border: none;</string>
          <normaloff>:/image/Blue Circle.png</normaloff>:/image/Blue Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="CategoryEx_2">
        <property name="geometry">
         <rect>
          <x>360</x>
@@ -426,7 +426,7 @@ border: none;</string>
          <normaloff>:/image/Red Circle.png</normaloff>:/image/Red Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="CategoryEx_3">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -448,7 +448,7 @@ border: none;</string>
          <normaloff>:/image/Purple Circle.png</normaloff>:/image/Purple Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="CategoryEx_4">
        <property name="geometry">
         <rect>
          <x>379</x>
@@ -470,7 +470,7 @@ border: none;</string>
          <normaloff>:/image/Yellow Circle.png</normaloff>:/image/Yellow Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="CategoryEx_5">
        <property name="geometry">
         <rect>
          <x>540</x>
@@ -492,7 +492,7 @@ border: none;</string>
          <normaloff>:/image/Brown Circle.png</normaloff>:/image/Brown Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="CategoryEx_6">
        <property name="geometry">
         <rect>
          <x>521</x>
@@ -514,7 +514,7 @@ border: none;</string>
          <normaloff>:/image/Pinc Circle.png</normaloff>:/image/Pinc Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="CategoryEx_7">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -536,7 +536,7 @@ border: none;</string>
          <normaloff>:/image/Orange Circle.png</normaloff>:/image/Orange Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="CategoryEx_8">
        <property name="geometry">
         <rect>
          <x>26</x>
@@ -558,7 +558,7 @@ border: none;</string>
          <normaloff>:/image/Green Circle.png</normaloff>:/image/Green Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="CategoryEx_9">
        <property name="geometry">
         <rect>
          <x>680</x>
@@ -580,7 +580,7 @@ border: none;</string>
          <normaloff>:/image/Sky Blue Circle.png</normaloff>:/image/Sky Blue Circle.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="CategoryEx_10">
        <property name="geometry">
         <rect>
          <x>690</x>
@@ -635,7 +635,7 @@ color: rgb(237, 255, 251);</string>
         <string>ЦЕЛЬ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="GoalNowLBl">
+      <widget class="QLabel" name="GoalNowLbl">
        <property name="geometry">
         <rect>
          <x>110</x>
@@ -667,7 +667,7 @@ color: rgb(237, 255, 251);</string>
         <string>ТРЕБУЕТСЯ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="BalanceLbl_2">
+      <widget class="QLabel" name="GoalNowSumLbl">
        <property name="geometry">
         <rect>
          <x>117</x>
@@ -683,7 +683,7 @@ color: rgb(237, 255, 251);</string>
         <string>0 ₽</string>
        </property>
       </widget>
-      <widget class="QLabel" name="BalanceLbl_3">
+      <widget class="QLabel" name="GoalNeedSumLbl">
        <property name="geometry">
         <rect>
          <x>327</x>
@@ -699,7 +699,7 @@ color: rgb(237, 255, 251);</string>
         <string>0 ₽</string>
        </property>
       </widget>
-      <widget class="QGroupBox" name="groupBox">
+      <widget class="QGroupBox" name="Line">
        <property name="geometry">
         <rect>
          <x>245</x>
@@ -715,7 +715,7 @@ color: rgb(237, 255, 251);</string>
         <string>GroupBox</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="GoalAddBtn_2">
+      <widget class="QPushButton" name="GoalEditBtn">
        <property name="geometry">
         <rect>
          <x>467</x>
@@ -830,7 +830,7 @@ color: rgb(237, 255, 251);</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QLineEdit" name="NameIncomeLbl">
+      <widget class="QLineEdit" name="DescIncomeLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -852,7 +852,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: Зарплата</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="SumIncomeLbl">
+      <widget class="QLineEdit" name="SumIncomeLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -874,7 +874,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: 20000</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="CategoryIncomeLbl">
+      <widget class="QComboBox" name="CategoryIncomeCB">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -923,7 +923,7 @@ font: 11pt &quot;Calibri&quot;;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="DateIncomeLbl">
+      <widget class="QLineEdit" name="DateIncomeLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1001,7 +1001,7 @@ QPushButton::hover
         <string>Сохранить</string>
        </property>
       </widget>
-      <widget class="QLabel" name="IncomeTitLbl_2">
+      <widget class="QLabel" name="IncomeTitLbl">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -1017,12 +1017,12 @@ QPushButton::hover
         <string>ИЗМЕНЕНИЕ ПРИБЫЛИ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_2">
+      <widget class="QLabel" name="DescIncomeLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
          <y>117</y>
-         <width>71</width>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -1030,10 +1030,10 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Описание</string>
+        <string>Описание (необязотельно)</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_3">
+      <widget class="QLabel" name="SumIncomeLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
@@ -1049,7 +1049,7 @@ QPushButton::hover
         <string>Сумма</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_4">
+      <widget class="QLabel" name="CategoryIncomeLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
@@ -1065,12 +1065,12 @@ QPushButton::hover
         <string>Категория прибыли</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_5">
+      <widget class="QLabel" name="DateIncomeLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
          <y>417</y>
-         <width>49</width>
+         <width>151</width>
          <height>16</height>
         </rect>
        </property>
@@ -1078,7 +1078,7 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Дата</string>
+        <string>Дата (необязательно)</string>
        </property>
       </widget>
      </widget>
@@ -1102,7 +1102,7 @@ QPushButton::hover
       <property name="title">
        <string/>
       </property>
-      <widget class="QLineEdit" name="NameExpenseLbl">
+      <widget class="QLineEdit" name="DescExpenseLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1124,7 +1124,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: Аренда</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="SumExpenseLbl">
+      <widget class="QLineEdit" name="SumExpenseLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1146,7 +1146,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: 20000</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="CategoryExpenseLbl">
+      <widget class="QComboBox" name="CategoryExpenseCB">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1220,7 +1220,7 @@ font: 11pt &quot;Calibri&quot;;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="DateExpenseLbl">
+      <widget class="QLineEdit" name="DateExpenseLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1314,12 +1314,12 @@ QPushButton::hover
         <string>ИЗМЕНЕНИЕ РАСХОДОВ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_6">
+      <widget class="QLabel" name="DescExpenseLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
          <y>117</y>
-         <width>71</width>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -1327,10 +1327,10 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Описание</string>
+        <string>Описание (необязательно)</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_7">
+      <widget class="QLabel" name="SumExpenseLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
@@ -1346,7 +1346,7 @@ QPushButton::hover
         <string>Сумма</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_8">
+      <widget class="QLabel" name="CategoryExpenseLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
@@ -1362,12 +1362,12 @@ QPushButton::hover
         <string>Категория расходов</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_9">
+      <widget class="QLabel" name="DateExpenseLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
          <y>417</y>
-         <width>49</width>
+         <width>141</width>
          <height>16</height>
         </rect>
        </property>
@@ -1375,7 +1375,7 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Дата</string>
+        <string>Дата (необязательно)</string>
        </property>
       </widget>
      </widget>
@@ -1384,7 +1384,7 @@ QPushButton::hover
      <property name="styleSheet">
       <string notr="true">background-color: rgb(1, 34, 27);</string>
      </property>
-     <widget class="QGroupBox" name="ExpenseAddGB_2">
+     <widget class="QGroupBox" name="BalanceAddGB">
       <property name="geometry">
        <rect>
         <x>380</x>
@@ -1399,7 +1399,7 @@ QPushButton::hover
       <property name="title">
        <string/>
       </property>
-      <widget class="QLineEdit" name="NameExpenseLbl_2">
+      <widget class="QLineEdit" name="NameBalanceLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1421,7 +1421,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: Аренда</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="SumExpenseLbl_2">
+      <widget class="QLineEdit" name="SumBalanceLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1443,7 +1443,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: 20000</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="CategoryExpenseLbl_2">
+      <widget class="QComboBox" name="CategoryBalanceCB">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1477,7 +1477,7 @@ font: 11pt &quot;Calibri&quot;;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="DateExpenseLbl_2">
+      <widget class="QLineEdit" name="DateBalanceLE">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1499,7 +1499,7 @@ font: 11pt &quot;Calibri&quot;;
         <string>Например: 12.07.2025</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="CancelExpenseBtn_2">
+      <widget class="QPushButton" name="CancelBalanceBtn">
        <property name="geometry">
         <rect>
          <x>110</x>
@@ -1527,7 +1527,7 @@ QPushButton::hover
         <string>Отмена</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="SaveExpenseBtn_2">
+      <widget class="QPushButton" name="SaveBalanceBtn">
        <property name="geometry">
         <rect>
          <x>220</x>
@@ -1555,7 +1555,7 @@ QPushButton::hover
         <string>Сохранить</string>
        </property>
       </widget>
-      <widget class="QLabel" name="ExpenseTitLbl_2">
+      <widget class="QLabel" name="BalanceTitLbl">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -1571,12 +1571,12 @@ QPushButton::hover
         <string>ИЗМЕНЕНИЕ БАЛАНСА</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_10">
+      <widget class="QLabel" name="DescBalanceLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
          <y>117</y>
-         <width>71</width>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -1584,10 +1584,10 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Описание</string>
+        <string>Описание (необязательно)</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_11">
+      <widget class="QLabel" name="SumBalanceLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
@@ -1603,7 +1603,7 @@ QPushButton::hover
         <string>Сумма</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_12">
+      <widget class="QLabel" name="AddSubBalanceLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
@@ -1619,12 +1619,12 @@ QPushButton::hover
         <string>Добавить/вычесть</string>
        </property>
       </widget>
-      <widget class="QLabel" name="MonthLbl_13">
+      <widget class="QLabel" name="DateBalanceLbl">
        <property name="geometry">
         <rect>
          <x>102</x>
          <y>417</y>
-         <width>49</width>
+         <width>141</width>
          <height>16</height>
         </rect>
        </property>
@@ -1632,13 +1632,13 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Дата</string>
+        <string>Дата (необязательно)</string>
        </property>
       </widget>
      </widget>
     </widget>
    </widget>
-   <widget class="QLabel" name="BackgroundLbl_3">
+   <widget class="QLabel" name="BackgroundLbl">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -1654,7 +1654,7 @@ QPushButton::hover
      <string/>
     </property>
    </widget>
-   <zorder>BackgroundLbl_3</zorder>
+   <zorder>BackgroundLbl</zorder>
    <zorder>stackedWidget</zorder>
   </widget>
  </widget>
