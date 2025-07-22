@@ -16,5 +16,6 @@
         <file>image/Sky Blue Circle.png</file>
         <file>image/RedactIcon.png</file>
         <file>image/GreenAccept.png</file>
+        <file>image/EconomIcon.png</file>
     </qresource>
 </RCC>

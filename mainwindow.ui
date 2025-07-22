@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CostIncomeAccounting</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/image/EconomIcon.png</normaloff>:/image/EconomIcon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
@@ -571,6 +575,22 @@ border: none;</string>
        <property name="icon">
         <iconset resource="images.qrc">
          <normaloff>:/image/Grey Circle.png</normaloff>:/image/Grey Circle.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="InvNALbl_2">
+       <property name="geometry">
+        <rect>
+         <x>461</x>
+         <y>172</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>НЕДОСТУПНО</string>
        </property>
       </widget>
      </widget>
