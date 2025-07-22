@@ -20,6 +20,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Обновление информации из БД
     UpdateInfo();
+
+    //Скрытие кнопок в "цели"
+    ui->GoalNowLE->setVisible(false);
+    ui->GreenAcceptNow->setVisible(false);
+    ui->GoalNeedLE->setVisible(false);
+    ui->GreenAcceptNeed->setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -150,6 +156,7 @@ void MainWindow::on_SaveExpenseBtn_clicked()
 //Метод обновления информации из БД
 void MainWindow::UpdateInfo()
 {
+    //Логика обновление информации прибыли\расходов
     db.open();
     QSqlQuery query;
     query.exec("SELECT Income FROM AccountingAllTable");
@@ -162,4 +169,58 @@ void MainWindow::UpdateInfo()
     ui->ExpenseLbl->setText(QString::number(Expense) + " ₽");
     int balance = Income - Expense;
     ui->BalanceLbl->setText(QString::number(balance) + " ₽");
+
+    //Логика обновление информации цели
+    query.exec("SELECT GoalNow FROM AccountingAllTable");
+    query.next();
+    int GoalValueNow = query.value(0).toInt();
+    ui->GoalNowSumLbl->setText(QString::number(GoalValueNow) + " ₽");
+    query.exec("SELECT GoalNeed FROM AccountingAllTable");
+    query.next();
+    int GoalValueNeed = query.value(0).toInt();
+    ui->GoalNeedSumLbl->setText(QString::number(GoalValueNeed) + " ₽");
+
+    db.close();
 }
+
+//Кнопка редактировании кнопки "сейчас"
+void MainWindow::on_GoalNowBtn_clicked()
+{
+    ui->GoalNowLE->setVisible(true);
+    ui->GreenAcceptNow->setVisible(true);
+}
+
+//Кнопка принятия цели "сейчас"
+void MainWindow::on_GreenAcceptNow_clicked()
+{
+    db.open();
+    QSqlQuery query;
+    query.prepare("UPDATE dbo.AccountingAllTable SET GoalNow = "+ui->GoalNowLE->text()+" ");
+    query.exec();
+    ui->GoalNowLE->setVisible(false);
+    ui->GreenAcceptNow->setVisible(false);
+    db.close();
+    UpdateInfo();
+}
+
+//Кнопка редактировании кнопки "требуется"
+void MainWindow::on_GoalNeedBtn_clicked()
+{
+    ui->GoalNeedLE->setVisible(true);
+    ui->GreenAcceptNeed->setVisible(true);
+}
+
+//Кнопка принятия цели "требуется"
+void MainWindow::on_GreenAcceptNeed_clicked()
+{
+    db.open();
+    QSqlQuery query;
+    query.prepare("UPDATE dbo.AccountingAllTable SET GoalNeed = "+ui->GoalNeedLE->text()+" ");
+    query.bindValue(":value", ui->GoalNeedLE->text().toInt());
+    query.exec();
+    ui->GoalNeedLE->setVisible(false);
+    ui->GreenAcceptNeed->setVisible(false);
+    db.close();
+    UpdateInfo();
+}
+
