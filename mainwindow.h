@@ -110,6 +110,14 @@ private slots:
 
     void UpdateInfo();
 
+    void on_GoalNowBtn_clicked();
+
+    void on_GreenAcceptNow_clicked();
+
+    void on_GoalNeedBtn_clicked();
+
+    void on_GreenAcceptNeed_clicked();
+
 private:
     Ui::MainWindow *ui;
     Transaction Tr;
