@@ -4,14 +4,28 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+
 {
     ui->setupUi(this);
 
+    //Подключение к БД
+    db = QSqlDatabase::addDatabase("QODBC");
+    db.setDatabaseName("DRIVER={SQL Server};SERVER=JERVISSSS\\LOCALSQL;DATABASE=Nurlan");
+    db.setUserName("Nurlan123");
+    db.setPassword("123");
+
+    //Проставление сегодняшней даты в DateEdit
+    ui->DateIncomeDE->setDate(QDate::currentDate());
+    ui->DateExpenseDE->setDate(QDate::currentDate());
+
+    //Обновление информации из БД
+    UpdateInfo();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    db.close();
 }
 
 // Анимация проявления
@@ -82,46 +96,20 @@ void MainWindow::on_CancelExpenseBtn_clicked()
                        });
 }
 
-// Кнопка "+" на балансе
-void MainWindow::on_BalanceAddBtn_clicked()
-{
-    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
-    QTimer::singleShot(450, [this]()
-                       {
-                           ui->stackedWidget->setCurrentIndex(3);
-                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
-                       });
-}
-
-//Кнопка "отмены" в окне балансе
-void MainWindow::on_CancelBalanceBtn_clicked()
-{
-    //Анимация проявления к главному окну
-    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
-    QTimer::singleShot(450, [this]()
-                       {
-                           ui->stackedWidget->setCurrentIndex(0);
-                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
-                       });
-}
 
 //Кнопка "сохранения" в окне прибыли
 void MainWindow::on_SaveIncomeBtn_clicked()
 {
-    //Добавление и сохренение суммы к прибыли и в аудит
-    Inc.SetData(ui->SumIncomeLE->text().toInt());
-    ui->IncomeLbl->setText(QString::number(Inc.GetSum()) + " ₽");
+    //Сохранение данных в БД
+    Inc.SetData(ui->DescIncomeLE->text(), ui->SumIncomeLE->text().toInt(), ui->CategoryIncomeCB->currentText(), ui->DateIncomeDE->dateTime());
+    Inc.Set2SQL(db, ui->stackedWidget->currentIndex());
 
-
-    //Сохранение категории в аудит
-    Inc.SetData(ui->CategoryIncomeCB->currentText());
-
-    //Сохранение даты в аудит
-    Inc.SetData(QDateTime::fromString(ui->DateIncomeLE->text(), "dd.MM.yyyy"));
+    //Обновление информации в интерфейсе
+    UpdateInfo();
 
     //Очистка полей в окне прибыли
     ui->SumIncomeLE->clear();
-    ui->DateIncomeLE->clear();
+    ui->DateIncomeDE->setDate(QDate::currentDate());
     ui->CategoryIncomeCB->setCurrentIndex(0);
     ui->DescIncomeLE->clear();
 
@@ -137,19 +125,16 @@ void MainWindow::on_SaveIncomeBtn_clicked()
 //Кнопка "сохранения" в окне расходов
 void MainWindow::on_SaveExpenseBtn_clicked()
 {
-    //Добавление и сохренение суммы к расходу и в аудит
-    Ex.SetData(ui->SumExpenseLE->text().toInt());
-    ui->ExpenseLbl->setText(QString::number(Ex.GetSum()) + " ₽");
+    //Сохранение данных в БД
+    Ex.SetData(ui->DescExpenseLE->text(), ui->SumExpenseLE->text().toInt(), ui->CategoryExpenseCB->currentText(), ui->DateExpenseDE->dateTime());
+    Ex.Set2SQL(db, ui->stackedWidget->currentIndex());
 
-    //Сохранение категории в аудит
-    Ex.SetData(ui->CategoryExpenseCB->currentText());
-
-    //Сохранение даты в аудит
-    Ex.SetData(QDateTime::fromString(ui->DateExpenseLE->text(), "dd.MM.yyyy"));
+    //Обновление информации в интерфейсе
+    UpdateInfo();
 
     //Очистка полей в окне расходов
     ui->SumExpenseLE->clear();
-    ui->DateExpenseLE->clear();
+    ui->DateExpenseDE->setDate(QDate::currentDate());
     ui->CategoryExpenseCB->setCurrentIndex(0);
     ui->DescExpenseLE->clear();
 
@@ -162,3 +147,19 @@ void MainWindow::on_SaveExpenseBtn_clicked()
                        });
 }
 
+//Метод обновления информации из БД
+void MainWindow::UpdateInfo()
+{
+    db.open();
+    QSqlQuery query;
+    query.exec("SELECT Income FROM AccountingAllTable");
+    query.next();
+    int Income = query.value(0).toInt();
+    ui->IncomeLbl->setText(QString::number(Income) + " ₽");
+    query.exec("SELECT Expense FROM AccountingAllTable");
+    query.next();
+    int Expense = query.value(0).toInt();
+    ui->ExpenseLbl->setText(QString::number(Expense) + " ₽");
+    int balance = Income - Expense;
+    ui->BalanceLbl->setText(QString::number(balance) + " ₽");
+}

@@ -7,38 +7,57 @@
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <QTimer>
+#include "QSqlDatabase"
+#include "QSqlQuery"
 
 class Transaction
 {
 public:
 
-    void SetData(int Num)
+    //Установка данных
+    void SetData(QString NewDesc, int NewSum, QString NewCategory, QDateTime NewDate)
     {
-        Sum = Sum + Num;
-    }
-
-    void SetData(QString NewCategory)
-    {
+        Sum = NewSum;
         Category = NewCategory;
-    }
-    void SetData(QDateTime NewDate)
-    {
         Date = NewDate;
+        Description= NewDesc;
     }
 
+    //Получение данных
     int GetSum()
     {
         return Sum;
     }
 
-    QString GetCategory()
-    {
-        return Category;
-    }
 
-    QDateTime GetDate()
+    //Перенос данных в БД
+    void Set2SQL(QSqlDatabase &db, int index)
     {
-        return Date;
+        QString TableName;
+        switch (index)
+        {
+            case(1):
+            TableName = "IncomeTable";
+            break;
+
+            case(2):
+            TableName = "ExpenseTable";
+            break;
+
+            default:
+            break;
+        }
+
+        db.open();
+        QSqlQuery query;
+        query.prepare("INSERT INTO dbo."+TableName+" (Description, Sum, Category, Date) VALUES (:desc, :sum, :category, :date)");
+        query.bindValue(":desc", Description);
+        query.bindValue(":sum", Sum);
+        query.bindValue(":category", Category);
+        query.bindValue(":date", Date);
+
+        query.exec();
+        db.close();
     }
 private:
 
@@ -48,12 +67,14 @@ private:
     QDateTime Date;
 };
 
+//Дочерний класс прибыли
 class Income : public Transaction
 {
 private:
     QString Source;
 };
 
+//Дочерний класс расходов
 class Expense : public Transaction
 {
 private:
@@ -83,19 +104,18 @@ private slots:
 
     void on_CancelExpenseBtn_clicked();
 
-    void on_BalanceAddBtn_clicked();
-
-    void on_CancelBalanceBtn_clicked();
-
     void on_SaveIncomeBtn_clicked();
 
     void on_SaveExpenseBtn_clicked();
+
+    void UpdateInfo();
 
 private:
     Ui::MainWindow *ui;
     Transaction Tr;
     Income Inc;
     Expense Ex;
+    QSqlDatabase db;
 };
 
 
