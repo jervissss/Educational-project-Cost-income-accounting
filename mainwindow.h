@@ -147,6 +147,10 @@ private slots:
 
     void on_GreenAcceptNeed_clicked();
 
+    void on_MainMenuBtn_clicked();
+
+    void on_AuditLogBtnM_clicked();
+
 private:
     Ui::MainWindow *ui;
     Transaction Tr;
