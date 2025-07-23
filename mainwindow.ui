@@ -964,20 +964,79 @@ color: rgb(237, 255, 251);</string>
         <string>ИНВЕСТИЦИИ</string>
        </property>
       </widget>
-      <widget class="QLabel" name="InvNALbl">
+      <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>105</y>
-         <width>101</width>
+         <x>40</x>
+         <y>73</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.vtb.ru/personal/investicii/vtbmi&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1f9b5d;&quot;&gt;ВТБ Инвестиции&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextInteractionFlag::TextBrowserInteraction</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>113</y>
+         <width>151</width>
          <height>16</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 700 12pt &quot;Calibri&quot;;</string>
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
        </property>
        <property name="text">
-        <string>НЕДОСТУПНО</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.sberbank.ru/ru/person/investments&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1f9b5d;&quot;&gt;Сбербанк Инвестиции&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextInteractionFlag::TextBrowserInteraction</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>153</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Calibri&quot;;
+background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.tbank.ru/invest&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1f9b5d;&quot;&gt;Т-Банк Инвестиции&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextInteractionFlag::TextBrowserInteraction</set>
        </property>
       </widget>
      </widget>
