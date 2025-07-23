@@ -31,7 +31,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="MainPage">
      <property name="styleSheet">
@@ -1244,7 +1244,7 @@ QPushButton::hover
         <string notr="true">font: 11pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
-        <string>Описание (необязотельно)</string>
+        <string>Описание (необязательно)</string>
        </property>
       </widget>
       <widget class="QLabel" name="SumIncomeLbl">

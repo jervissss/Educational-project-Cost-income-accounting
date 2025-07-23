@@ -10,6 +10,8 @@
 #include "QSqlDatabase"
 #include "QSqlQuery"
 #include "QSqlTableModel"
+#include "QMessageBox"
+#include "QSqlError"
 
 class Transaction
 {
@@ -32,7 +34,7 @@ public:
 
 
     //Перенос данных в БД
-    void Set2SQL(QSqlDatabase &db, int index)
+    void Set2SQL(int index)
     {
         QString TableName;
         switch (index)
@@ -49,17 +51,13 @@ public:
             break;
         }
 
-        db.open();
         QSqlQuery query;
         query.prepare("INSERT INTO dbo."+TableName+" (Description, Sum, Category, Date) VALUES (:desc, :sum, :category, :date)");
         query.bindValue(":desc", Description);
         query.bindValue(":sum", Sum);
         query.bindValue(":category", Category);
         query.bindValue(":date", Date);
-
-
         query.exec();
-        db.close();
     }
 private:
 
@@ -75,15 +73,13 @@ class Income : public Transaction
 public:
 
     //Добавление в БД источника дохода
-    void SetSourse2SQL(QSqlDatabase &db, QString Source)
+    void SetSourse2SQL(QString Source)
     {
         this->Source = Source;
-        db.open();
         QSqlQuery query;
         query.prepare("Update dbo.IncomeTable SET Source = :source WHERE id = (SELECT MAX(id) FROM dbo.IncomeTable)");
         query.bindValue(":source", this->Source);
         query.exec();
-        db.close();
     }
 
 private:
@@ -96,15 +92,13 @@ class Expense : public Transaction
 public:
 
     //Добавление в БД метода оплаты
-    void SetPaymentMethod2SQL(QSqlDatabase &db, QString PaymentMethod)
+    void SetPaymentMethod2SQL(QString PaymentMethod)
     {
         this->PaymentMethod = PaymentMethod;
-        db.open();
         QSqlQuery query;
         query.prepare("Update dbo.ExpenseTable SET PaymentMethod = :paymentmethod WHERE id = (SELECT MAX(id) FROM dbo.ExpenseTable)");
         query.bindValue(":paymentmethod", this->PaymentMethod);
         query.exec();
-        db.close();
     }
 
 private:
@@ -151,6 +145,8 @@ private slots:
     void on_MainMenuBtn_clicked();
 
     void on_AuditLogBtnM_clicked();
+
+    void SwitchPage(int newIndex);
 
 private:
     Ui::MainWindow *ui;
