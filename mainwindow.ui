@@ -1643,7 +1643,11 @@ font: 11pt &quot;Calibri&quot;;
       <property name="styleSheet">
        <string notr="true">border: 1px solid#aaa;
 border-color: rgb(255, 255, 255);
-color: rgb(237, 255, 251);</string>
+color: rgb(237, 255, 251);
+ gridline-color: #d0d0d0;</string>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::PenStyle::SolidLine</enum>
       </property>
      </widget>
      <widget class="QTableView" name="ExpenseTV">
@@ -1658,7 +1662,8 @@ color: rgb(237, 255, 251);</string>
       <property name="styleSheet">
        <string notr="true">border: 1px solid#aaa;
 border-color: rgb(255, 255, 255);
-color: rgb(237, 255, 251);</string>
+color: rgb(237, 255, 251);
+ gridline-color: #d0d0d0;</string>
       </property>
      </widget>
      <widget class="QLabel" name="AuditLogIncLbl">

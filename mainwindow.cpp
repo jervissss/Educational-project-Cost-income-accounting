@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->GreenAcceptNow->setVisible(false);
     ui->GoalNeedLE->setVisible(false);
     ui->GreenAcceptNeed->setVisible(false);
+
 }
 
 MainWindow::~MainWindow()
@@ -247,6 +248,45 @@ void MainWindow::on_MainMenuBtn_clicked()
 
 void MainWindow::on_AuditLogBtnM_clicked()
 {
+    db.open();
+
+    //Отображение аудита для прибыли
+    QSqlTableModel *modelInc = new QSqlTableModel(this, db);
+    modelInc->setTable("IncomeTable");
+    modelInc->setSort(modelInc->fieldIndex("id"), Qt::DescendingOrder);
+    modelInc->select();
+    modelInc->setHeaderData(0, Qt::Horizontal, tr("ID"));
+    modelInc->setHeaderData(1, Qt::Horizontal, tr("Описание"));
+    modelInc->setHeaderData(2, Qt::Horizontal, tr("Сумма"));
+    modelInc->setHeaderData(3, Qt::Horizontal, tr("Категория"));
+    modelInc->setHeaderData(4, Qt::Horizontal, tr("Дата"));
+    modelInc->setHeaderData(5, Qt::Horizontal, tr("Источник дохода"));
+    ui->IncomeTV->setModel(modelInc);
+    ui->IncomeTV->hideColumn(0);
+    ui->IncomeTV->resizeColumnsToContents();
+    ui->IncomeTV->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->IncomeTV->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->IncomeTV->verticalHeader()->setDefaultSectionSize(40); // Высота строк
+
+
+    //Отображение аудита для расходов
+    QSqlTableModel *modelEx = new QSqlTableModel(this, db);
+    modelEx->setTable("ExpenseTable");
+    modelEx->setSort(modelEx->fieldIndex("id"), Qt::DescendingOrder);
+    modelEx->select();
+    modelEx->setHeaderData(0, Qt::Horizontal, tr("ID"));
+    modelEx->setHeaderData(1, Qt::Horizontal, tr("Описание"));
+    modelEx->setHeaderData(2, Qt::Horizontal, tr("Сумма"));
+    modelEx->setHeaderData(3, Qt::Horizontal, tr("Категория"));
+    modelEx->setHeaderData(4, Qt::Horizontal, tr("Дата"));
+    modelEx->setHeaderData(5, Qt::Horizontal, tr("Способ оплаты"));
+    ui->ExpenseTV->setModel(modelEx);
+    ui->ExpenseTV->hideColumn(0);
+    ui->ExpenseTV->resizeColumnsToContents();
+    ui->ExpenseTV->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->ExpenseTV->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->ExpenseTV->verticalHeader()->setDefaultSectionSize(40); // Высота строк
+
     //Анимация проявления журнала аудита
     OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
     QTimer::singleShot(450, [this]()

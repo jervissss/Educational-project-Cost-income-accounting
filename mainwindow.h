@@ -9,6 +9,7 @@
 #include <QTimer>
 #include "QSqlDatabase"
 #include "QSqlQuery"
+#include "QSqlTableModel"
 
 class Transaction
 {
