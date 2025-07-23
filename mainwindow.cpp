@@ -207,6 +207,7 @@ void MainWindow::on_GreenAcceptNow_clicked()
     ui->GreenAcceptNow->setVisible(false);
     db.close();
     UpdateInfo();
+    ui->GoalNowLE->clear();
 }
 
 //Кнопка редактировании кнопки "требуется"
@@ -228,5 +229,30 @@ void MainWindow::on_GreenAcceptNeed_clicked()
     ui->GreenAcceptNeed->setVisible(false);
     db.close();
     UpdateInfo();
+    ui->GoalNeedLE->clear();
+}
+
+
+void MainWindow::on_MainMenuBtn_clicked()
+{
+    //Анимация проявления к главному окну
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(0);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
+}
+
+
+void MainWindow::on_AuditLogBtnM_clicked()
+{
+    //Анимация проявления журнала аудита
+    OpacityAnimation(450, ui->stackedWidget->currentWidget(), false);
+    QTimer::singleShot(450, [this]()
+                       {
+                           ui->stackedWidget->setCurrentIndex(3);
+                           OpacityAnimation(450, ui->stackedWidget->currentWidget(), true);
+                       });
 }
 

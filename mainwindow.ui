@@ -308,6 +308,43 @@ color: rgb(237, 255, 251);</string>
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="AuditLogBtnM">
+       <property name="geometry">
+        <rect>
+         <x>288</x>
+         <y>6</y>
+         <width>25</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+font: 700 12pt &quot;Calibri&quot;;
+background-color: rgb(1, 34, 27);
+border: none;
+ }
+
+QPushButton::hover{
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/image/AuditLog.png</normaloff>:/image/AuditLog.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>23</width>
+         <height>23</height>
+        </size>
+       </property>
+      </widget>
      </widget>
      <widget class="QGroupBox" name="Expence_DynamicGB">
       <property name="geometry">
@@ -837,6 +874,9 @@ font: 11pt &quot;Calibri&quot;;
          <height>25</height>
         </rect>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 font: 700 12pt &quot;Calibri&quot;;
@@ -866,6 +906,9 @@ border: none;
          <width>25</width>
          <height>25</height>
         </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
@@ -1513,7 +1556,7 @@ QPushButton::hover
        <property name="geometry">
         <rect>
          <x>102</x>
-         <y>425</y>
+         <y>415</y>
          <width>141</width>
          <height>16</height>
         </rect>
@@ -1529,7 +1572,7 @@ QPushButton::hover
        <property name="geometry">
         <rect>
          <x>100</x>
-         <y>450</y>
+         <y>440</y>
          <width>210</width>
          <height>40</height>
         </rect>
@@ -1548,7 +1591,7 @@ font: 11pt &quot;Calibri&quot;;
        <property name="geometry">
         <rect>
          <x>100</x>
-         <y>550</y>
+         <y>540</y>
          <width>210</width>
          <height>40</height>
         </rect>
@@ -1570,7 +1613,7 @@ font: 11pt &quot;Calibri&quot;;
        <property name="geometry">
         <rect>
          <x>102</x>
-         <y>526</y>
+         <y>516</y>
          <width>211</width>
          <height>16</height>
         </rect>
@@ -1582,6 +1625,112 @@ font: 11pt &quot;Calibri&quot;;
         <string>Способ оплаты (необязательно)</string>
        </property>
       </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="AuditLogPage">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(1, 34, 27);</string>
+     </property>
+     <widget class="QTableView" name="IncomeTV">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>1071</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid#aaa;
+border-color: rgb(255, 255, 255);
+color: rgb(237, 255, 251);</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="ExpenseTV">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>480</y>
+        <width>1071</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid#aaa;
+border-color: rgb(255, 255, 255);
+color: rgb(237, 255, 251);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AuditLogIncLbl">
+      <property name="geometry">
+       <rect>
+        <x>465</x>
+        <y>40</y>
+        <width>221</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);
+font: 700 13pt &quot;Calibri&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ЖУРНАЛ АУДИТА (ПРИБЫЛИ)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AuditLogExLbl">
+      <property name="geometry">
+       <rect>
+        <x>468</x>
+        <y>410</y>
+        <width>221</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(19, 61, 51);
+color: rgb(237, 255, 251);
+font: 700 13pt &quot;Calibri&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ЖУРНАЛ АУДИТА (РАСХОДОВ)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="MainMenuBtn">
+      <property name="geometry">
+       <rect>
+        <x>954</x>
+        <y>800</y>
+        <width>131</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+font: 11pt &quot;Calibri&quot;;
+background-color: rgb(2, 70, 55);
+border-radius: 5px;
+	color: rgb(255, 255, 255);
+}
+QPushButton::hover
+{
+	background-color: rgb(3, 99, 77);
+}</string>
+      </property>
+      <property name="text">
+       <string>На главное меню</string>
+      </property>
      </widget>
     </widget>
    </widget>

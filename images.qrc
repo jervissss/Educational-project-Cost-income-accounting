@@ -17,5 +17,6 @@
         <file>image/RedactIcon.png</file>
         <file>image/GreenAccept.png</file>
         <file>image/EconomIcon.png</file>
+        <file>image/AuditLog.png</file>
     </qresource>
 </RCC>
